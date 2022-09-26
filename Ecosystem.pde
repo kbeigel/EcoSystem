@@ -1,4 +1,4 @@
-//fonts being declared here, equal to null-- not said what they are; later these will be made and everyhting should be able to access them
+//fonts being declared here, equal to null-- not said what they are; later these will be made and everything should be able to access them
 PFont font;
 ArrayList<Plankton> planktons;
 int initialPlanktons = 200;
