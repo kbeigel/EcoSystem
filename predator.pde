@@ -26,7 +26,7 @@ class Predator {
   void Initialize() {
     location   = new PVector(random(-margin, width + margin), random(-margin, height + margin));
     tintHue    = int(random(215, 235));
-    image      = loadShape("creaturesart2500.svg");
+    image      = loadShape("predator.svg");
     drawWidth  = 6;
     drawHeight = 6;
     margin = 7;

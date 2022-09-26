@@ -31,7 +31,7 @@ class Plankton
   {
     location   = new PVector();
     tintHue    = int(random(0, 250));
-    image      = loadShape("creaturesart2500.svg");
+    image      = loadShape("plankton.svg");
     drawWidth  = 5;
     drawHeight = 5;
     moveRange  = 3;

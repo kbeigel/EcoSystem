@@ -2,13 +2,14 @@ class Prey {
 
   PVector location;
   PVector velocity;
+  int tintHue;
   PVector acceleration;
   float margin;
   float maxforce;
   float maxspeed;
   float eatRange;
   int framesSinceFood;
-  PShape img;
+  PShape image;
   float drawWidth;
   float drawHeight;
   boolean isFull;
@@ -33,21 +34,19 @@ class Prey {
   // initialize flock
   private void initialize()
   {
-    img = loadShape("creaturesart2500-1.svg");
-
+    tintHue    = int(random(215, 235));
+    image      = loadShape("prey.svg");
+    drawWidth  = 7;
+    drawHeight = 7;
+    margin = 7;
     acceleration = new PVector(0, 0);
-
     // sets the initial velocity of the prey
     float angle = random(TWO_PI);
     velocity = new PVector(cos(angle), sin(angle));
-
     location = new PVector();
-    margin = 7.0;
     maxspeed = 6;
     maxforce = 0.09;
     eatRange = 5.0;
-    drawWidth  = 10;
-    drawHeight = 15;
     isFull = false;
     framesSinceFood = 0;
     foodLagTimer = 0;
@@ -176,7 +175,7 @@ class Prey {
      */
 
 
-    shape(img, location.x, location.y, 10, 10);
+    shape(image, location.x, location.y, 10, 10);
     pushMatrix();
     rotate(theta);
     popMatrix();

@@ -145,7 +145,6 @@ void keyPressed() {
   if (key=='g') {
     flock.addPrey(new Prey());
   }
-
   if (key=='j') {
     ListOfPredators.add(new Predator());
   }
