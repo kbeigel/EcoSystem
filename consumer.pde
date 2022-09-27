@@ -32,7 +32,7 @@ class Consumer { //<>// //<>//
     image      = loadShape("consumer.svg");
     drawWidth  = 7;
     drawHeight = 7;
-    margin = 7;
+    margin = 2;
     moveRange  = 3;
     velocity = new PVector(5, 0);
     maxforce = 1.0;
@@ -72,7 +72,6 @@ class Consumer { //<>// //<>//
   //drawing the consumer
   void render() {
     // Draw a consumer rotated in the direction of velocity
-
 
     float theta = velocity.heading() + radians(90);
     colorMode(RGB);

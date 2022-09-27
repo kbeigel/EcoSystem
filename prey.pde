@@ -34,9 +34,9 @@ class Prey {
   // initialize flock
   private void initialize()
   {
-    tintHue    = int(random(215, 235));
+    //tintHue    = int(random(215, 235));
     image      = loadShape("prey.svg");
-    drawWidth  = 7;
+    drawWidth  = 7; //<>//
     drawHeight = 7;
     margin = 7;
     acceleration = new PVector(0, 0);
@@ -166,16 +166,13 @@ class Prey {
   void render() {
     // Draw an organism rotated in the direction of velocity
     float theta = velocity.heading() + radians(90);
-    /*
-           colorMode(RGB);  
-     noStroke();
-     fill(40, 30, 190);
-     triangle((location.x), (location.y+(drawHeight/2)), (location.x-(drawWidth/2)), (location.y-(drawHeight/2)), (location.x+(drawWidth/2)), (location.y-(drawHeight/2)));
-     rotate(1);
-     */
-
-
+    
+    colorMode(RGB);  
+    // noStroke();
+    // triangle((location.x), (location.y+(drawHeight/2)), (location.x-(drawWidth/2)), (location.y-(drawHeight/2)), (location.x+(drawWidth/2)), (location.y-(drawHeight/2)));
+    // rotate(1);
     shape(image, location.x, location.y, 10, 10);
+    fill(40, 30, 190);
     pushMatrix();
     rotate(theta);
     popMatrix();
